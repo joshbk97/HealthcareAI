@@ -2,21 +2,49 @@
 
 body
 	{
-		background: #ffffff;
+		background: #0e0e0e;
     font-family: 'Raleway', sans-serif;
 		font-weight: 400;
     position: relative;
 	}
 
+h1.wow.fadeInDown 
+{
+    padding-top: 60px; /* Adjust this value for more or less space */
+}
+
+h1.wow.fadeInDown + h1.wow.fadeInDown {
+    margin-top: 0px; /* Remove the space above the second line */
+}
+
 h2, h3, h4
     {
         font-weight: bold;
+        color: #00ffff;
+        padding-top: 10px;
     }
+h5 
+{
+    color: #ffffff;
+}
 
-p
+title
+{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p, li 
     {
         line-height: 26px;
+        font-size: 20px; /* Smaller for better readability */
+        color: #ffffff; /* Improved contrast for better visibility */
     }
+
+.label-white {
+    color: white; /* Change the color to white */
+}
+
 
 /* start all section */
 #service, #portfolio, #contact
@@ -30,7 +58,7 @@ p
 /* start nagivation */
 .navbar-default
     {
-        background: #fff;
+        background: #1c1c1c;
         border: none;
         box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
         margin: 0 !important;
@@ -153,46 +181,105 @@ p
     color: #93ca3a;
     border: 2px solid transparent;
 }
+.text-align-left {
+    text-align: left;
+    max-width: 48%; /* This makes the paragraph take up half the screen */
+    margin-left: 2rem; /* Ensures the text is aligned to the left side */
+    padding-right: 2rem; /* Optional: Add some padding to the right for better readability */
+}
+.text-bg {
+    color: #000000;
+    text-align: left;
+}
 
 /* end home */
 
 /* start service */
-#service .media
-    {
-        padding: 10px;
-    }
-#service .media .fa
-    {
-        color: #202020;
-        font-size: 40px;
-        margin-right: 20px;
-    }
-#service .media .media-heading
-    {
-        border-bottom: 2px solid #202020;
-        font-weight: 600;
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
+#service .media {
+    padding: 20px;
+}
+
+#service .media .fa {
+    color: #00ff00;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+#service .media .media-heading {
+    border-bottom: 2px solid #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+/* Ensure the media content aligns properly */
+#service .row {
+    margin-bottom: 20px; /* Adds spacing between rows */
+}
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.flip-card-front {
+    background-color: #2980b9;
+    color: white;
+    font-size: 20px;
+}
+
+.flip-card-back {
+    background-color: #ecf0f1;
+    color: black;
+    transform: rotateY(180deg);
+    font-size: 16px;
+}
 /* end service */
 
 /* start disease page */
 #disease_page {
-
     max-width: 100%;
+    padding: 20px;
+    color: #ffffff; /* Adjusted text color */
 }
-#disease_page h3
-    {
-        color: #93ca3a;
-        font-size: 40px;
-        padding-bottom: 40px;
-        
-    }
-#disease_page h4
-    {
-        padding-bottom: 10px;
-        font-size: 30px;
-    }
+
+#disease_page h3 {
+    color: #93ca3a;
+    font-size: 40px;
+    padding-bottom: 20px; /* Reduced for compactness */
+}
+
+#disease_page h4 {
+    padding-bottom: 10px;
+    font-size: 30px;
+}
 #disease_page .progress
     {
         border-radius: 4px;
@@ -221,30 +308,25 @@ p
         font-weight: bold;
         padding-left: 200px;
     }
-#disease_page .ill_image
-    {  
-        padding-top: 30%;
-        padding-bottom: 20%;
-        padding-left: 5%;
-        padding-right: 5%;
-        max-width: 100%;
+#disease_page .ill_image 
+    {
+        padding: 10% 5%; /* Adjusted padding for consistency */
+        max-width: 50%;
         display: block;
         text-align: right;
-
     }
-#disease_page .prediction .btn{
-    background: #93ca3a;
-    border-radius: 0;
-    border: 2px solid transparent;
-    color: #FFFFFF;
-    font-weight: bold;
-
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    height: 50px;
-    width: 50px;
-    padding-top: 50%;
-}
+#disease_page .prediction .btn 
+    {
+        background: #93ca3a;
+        border-radius: 0;
+        border: 2px solid transparent;
+        color: #FFFFFF;
+        font-weight: bold;
+        transition: all 0.4s ease-in-out;
+        height: 50px;
+        width: 150px; /* More suitable for button size */
+        padding: 12px; /* Adjusted padding for consistency */
+    }
 #disease_page .prediction .btn:hover,
 #disease_page .prediction .btn:focus {
     background: #fff;
@@ -252,13 +334,9 @@ p
     border: 2px solid transparent;
 }
 #disease_page .flex-wrapper {
-  display: flex;
-  flex-flow: row nowrap;
-  padding-top: 40%;
-  padding-bottom: 10%;
-  padding-left: 25%;
-  padding-right: 25%;
-  text-align: right;
+    display: flex;
+    justify-content: center; /* Centers the chart better */
+    padding: 20px;
 }
 
 #disease_page .single-chart {
@@ -270,10 +348,8 @@ p
 }
 
 #disease_page .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
-  max-height: 250px;
+    max-width: 100px; /* Adjusted size for better fit */
+    margin: 10px auto;
 }
 
 #disease_page .circle-bg {
@@ -399,7 +475,7 @@ p
 }
 .iso-box {
     position: relative;
-    min-height: 50px;
+    height: 225px;
     float: left;
     overflow: hidden;
     margin-bottom: 20px;
